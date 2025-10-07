@@ -23,9 +23,7 @@ Text paragraph.
 
 Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
 
-The `<p>` tag defines a paragraph.
-
-Browsers automatically add a single blank line before and after each `<p>` element.
+Browsers automatically add a single blank line before and after each paragraph element.
 
 |Attributes support|   |
 |------------------|---|
