@@ -39,7 +39,7 @@ Browsers automatically add a single blank line before and after each paragraph e
 ```
 
 **Samples**:
-* [Basic](../../../samples/elements/paragraph/p.html)
+* [Basic](../../../samples/elements/p/p.html)
 
 ## Block quotation
 
