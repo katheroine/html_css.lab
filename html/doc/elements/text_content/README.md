@@ -190,7 +190,7 @@ Some examples of cases where the pre element could be used:
 ## Examples
 
 ```html
-<pre>print("Hello, world!");</blockquote>
+<pre>print("Hello, world!");</pre>
 ```
 
 **Samples**:
@@ -204,3 +204,56 @@ Some examples of cases where the pre element could be used:
 * To represent a block of computer code, the `pre` element can be used with a [**`code`**](#code) element.
 * To represent a block of computer output the `pre` element can be used with a [**`samp`**](#samp) element.
 * Similarly, the [**`kbd`**](#kbd) element can be used within a `pre` element to indicate text that the user is to enter.
+
+## Horizontal rule
+
+### Documentation
+
+|Website  |URL                                                                        |
+|---------|---------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_hr.asp                                  |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr    |
+
+### Tag
+
+```html
+<hr>
+```
+
+### Description
+
+Paragraph-level thematic break.
+Previously: horizontal rule.
+
+**Type**: Block
+
+**Categories**:
+* Flow content
+* **`select`** element inner content elements
+
+**Contexts in which this element can be used**:
+* Where flow content is expected
+* As a child of a **`select`** element
+
+**Content model**: Nothing
+
+The `hr` element represents a paragraph-level thematic break, e.g., a scene change in a story, or a transition to another topic within a section of a reference book; alternatively, it represents a separator between a set of options of a select element.
+
+Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in *semantic terms*, rather than *presentational terms*, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
+
+## Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+## Examples
+
+```html
+<hr>
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/hr/hr.html)
