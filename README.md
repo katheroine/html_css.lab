@@ -9,7 +9,9 @@ HTML & CSS laboratory
 #### Description
 
 1. Elements
-    1. [Text packets](html/doc/elements/text_packets/README.md)
+    1. [Text items](html/doc/elements/text_items/README.md)
+        1. [Italic `<i></i>`](html/doc/elements/text_items/README.md#italic)
+    2. [Text packets](html/doc/elements/text_packets/README.md)
         1. [Paragraph `<p></p>`](html/doc/elements/text_packets/README.md#paragraph)
         2. [Block quotation `<blockquote></blockquote>`](html/doc/elements/text_packets/README.md#block-quotation)
         3. [Preformatted text `<pre></pre>`](html/doc/elements/text_packets/README.md#preformatted-text)
@@ -18,7 +20,8 @@ HTML & CSS laboratory
 #### Samples
 
 1. Elements
-    1. [Paragraph `<p></p>`](html/samples/elements/p/)
-    2. [Block quotation `<blockquote></blockquote>`](html/samples/elements/blockquote/)
-    3. [Preformatted text `<pre></pre>`](html/samples/elements/pre/)
-    4. [Horizontal rule `<hr>`](html/samples/elements/hr/)
+    1. [Italic `<i></i>`](html/samples/elements/i/)
+    2. [Paragraph `<p></p>`](html/samples/elements/p/)
+    3. [Block quotation `<blockquote></blockquote>`](html/samples/elements/blockquote/)
+    4. [Preformatted text `<pre></pre>`](html/samples/elements/pre/)
+    5. [Horizontal rule `<hr>`](html/samples/elements/hr/)
