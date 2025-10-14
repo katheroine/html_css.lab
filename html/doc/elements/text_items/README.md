@@ -221,9 +221,6 @@ Watch out to not write it <u>envinorment</u>.
 
 ### Related elements
 
-Other elements to consider using
-In most cases, you should use an element other than <u>, such as:
-
 * Use [**`em`**](#emphasis) to denote stress emphasis.
 * Use [**`b`**](#bold) to draw attention to text.
 * Use [**`mark`**](#mark) to mark key words or phrases.
@@ -231,3 +228,65 @@ In most cases, you should use an element other than <u>, such as:
 * Use [**`cite`**](#citation) to mark the titles of books or other publications.
 * Use [**`i`**](#italic) to denote technical terms, transliterations, thoughts, or names of vessels in Western texts.
 * Use [**`ruby`**](#ruby) to provide textual annotations (as opposed to the non-textual annotations created with `u`).
+
+## Strikethrough
+
+### Documentation
+
+|Website  |URL                                                                           |
+|---------|------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_s.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/s        |
+
+### Tag
+
+```html
+<s></s>
+```
+
+### Description
+
+Contents that are no longer accurate or no longer relevant.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `s` element represents contents that are no longer correct, accurate or no longer relevant.
+
+The `s` HTML element renders text with a strikethrough, or a line through it.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Accessibility
+
+The presence of the s element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS content property, along with the `::before` and `::after` pseudo-elements.
+
+Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
+
+### Examples
+
+```html
+The price is only <s>$3.99</s> $2.99!
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/s/s.html)
+
+### Related elements
+
+* Use [**`del`**](#del) and [**`ins`**](#ins) elements <s> when indicating document edits.
