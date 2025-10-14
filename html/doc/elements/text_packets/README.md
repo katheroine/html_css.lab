@@ -1,4 +1,4 @@
-# HTML elements: Text content
+# HTML elements: Text packets
 
 ## Paragraph
 
