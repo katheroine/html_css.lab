@@ -150,3 +150,84 @@ Authors can use the `class` attribute on the `b` element to identify why the ele
 * Stress emphasis should use the [**`em`**](#emphasis) element.
 * Importance should be denoted with the [**`strong`**](#strong) element.
 * Text marked or highlighted should use the [**`mark`**](#mark) element.
+
+## Unarticulated
+
+### Documentation
+
+|Website  |URL                                                                           |
+|---------|------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_u.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/u        |
+
+### Tag
+
+```html
+<u></u>
+```
+
+### Description
+
+Unarticulated annotation.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `u` element represents a span of text with an unarticulatedand styled differently from normal text, such as misspelled words or proper names in Chinese text (a Chinese proper name mark), or labeling the text as being misspelt.
+
+The content inside is typically displayed with an underline.
+
+#### Use cases
+
+* Annotating spelling errors
+* A proper name mark to denote proper names in Chinese text
+* Other forms of annotation
+
+You should not use `u` to underline text for presentation purposes, or to denote titles of books.
+
+Avoid using the `u` element where it could be confused for a hyperlink!
+
+To apply an underlined appearance without any semantic meaning, use the text-decoration property's value underline.
+
+#### History
+
+Along with other pure styling elements, the original HTML Underline `u` element was deprecated in HTML 4. However, `u` was restored in HTML 5 with a new, semantic, meaning: to mark text as having some form of non-textual annotation applied.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+Watch out to not write it <u>envinorment</u>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/u/u.html)
+
+### Related elements
+
+Other elements to consider using
+In most cases, you should use an element other than <u>, such as:
+
+* Use [**`em`**](#emphasis) to denote stress emphasis.
+* Use [**`b`**](#bold) to draw attention to text.
+* Use [**`mark`**](#mark) to mark key words or phrases.
+* Use [**`strong`**](#strong) to indicate that text has strong importance.
+* Use [**`cite`**](#citation) to mark the titles of books or other publications.
+* Use [**`i`**](#italic) to denote technical terms, transliterations, thoughts, or names of vessels in Western texts.
+* Use [**`ruby`**](#ruby) to provide textual annotations (as opposed to the non-textual annotations created with `u`).
