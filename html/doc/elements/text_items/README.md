@@ -517,3 +517,67 @@ GitHub is committed to shaping policies that promote programmers' interests and 
 
 * The `small` element does not "de-emphasize" or lower the importance of text emphasized by the [**`em`**](#emphasis) element or marked as important with the [**`strong`**](#strong) element. To mark text as not emphasized or important, simply do not mark it up with the [**`em`**](#emphasis) or [**`strong`**](#strong) elements respectively.
 * The small element must not be used for subheadings; for that purpose, use the [**`hgroup`**](#hgroup) element.
+
+## Mark
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_mark.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/mark        |
+
+### Tag
+
+```html
+<mark></mark>
+```
+
+### Description
+
+Text marked for reference purposes.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `mark` element represents a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context. When used in a quotation or other block of text referred to from the prose, it indicates a highlight that was not originally present but which has been added to bring the reader's attention to a part of the text that might not have been considered important by the original author when the block was originally written, but which is now under previously unexpected scrutiny. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its likely relevance to the user's current activity.
+
+### Use cases
+
+* When used in a quotation (`q`) or block quote (`blockquote`), it generally indicates text which is of special interest but is not marked in the original source material, or material which needs special scrutiny even though the original author didn't think it was of particular importance. Think of this like using a highlighter pen in a book to mark passages that you find of interest.
+* Otherwise, `mark` indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Accessibility
+
+The presence of the mark element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS content property, along with the `::before` and `::after` pseudo-elements.
+
+### Examples
+
+```html
+We work every working day for al least <mark>eight hours</mark>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/mark/mark.html)
+
+### Related elements
+
+* Don't use `mark` for syntax highlighting purposes; instead, use the [**`span`**](#span) element with appropriate CSS applied to it.
+* Don't confuse `mark` with the [**`strong`**](#strong) element; `mark` is used to denote content which has a degree of relevance, while `strong` indicates spans of text of importance.
