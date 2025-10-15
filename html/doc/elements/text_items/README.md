@@ -34,6 +34,8 @@ Voice or mood, text of different quality than normal prose.
 
 The `i` element represents a span of text in an *alternate voice or mood*, or otherwise offset from the normal prose in a manner indicating a different quality of text for readability reasons. This would be a range of text with different semantic meaning than the surrounding text.
 
+The content inside is typically displayed in italic.
+
 #### Use cases
 
 * *Alternative voice or mood*
@@ -43,8 +45,6 @@ The `i` element represents a span of text in an *alternate voice or mood*, or ot
 * *Transliterations*
 * *Thoughts* (such as "She wondered, What is this writer talking about, anyway?")
 * *Ship or vessel names* in Western writing systems (such as "They searched the docks for the Empress of the Galaxy, the ship to which they were assigned.")
-
-The content inside is typically displayed in italic.
 
 #### History
 
@@ -187,17 +187,17 @@ The `u` element represents a span of text with an unarticulatedand styled differ
 
 The content inside is typically displayed with an underline.
 
-#### Use cases
-
-* Annotating spelling errors
-* A proper name mark to denote proper names in Chinese text
-* Other forms of annotation
-
 You should not use `u` to underline text for presentation purposes, or to denote titles of books.
 
 Avoid using the `u` element where it could be confused for a hyperlink!
 
 To apply an underlined appearance without any semantic meaning, use the text-decoration property's value underline.
+
+#### Use cases
+
+* Annotating spelling errors
+* A proper name mark to denote proper names in Chinese text
+* Other forms of annotation
 
 #### History
 
@@ -289,4 +289,82 @@ The price is only <s>$3.99</s> $2.99!
 
 ### Related elements
 
-* Use [**`del`**](#del) and [**`ins`**](#ins) elements <s> when indicating document edits.
+* Use [**`del`**](#del) and [**`ins`**](#ins) elements when indicating document edits.
+
+## Emphasis
+
+### Documentation
+
+|Website  |URL                                                                            |
+|---------|-------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_em.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/em        |
+
+### Tag
+
+```html
+<em></em>
+```
+
+### Description
+
+Stress emphasis.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `em` element represents stress emphasis of its contents. The `em` element is for words that have a stressed emphasis compared to surrounding text, which is often limited to a word or words of a sentence and affects the meaning of the sentence itself.
+
+The `em` element can be nested, with each level of nesting indicating a greater degree of emphasis.
+
+The placement of stress emphasis changes the meaning of the sentence. The element thus forms an integral part of the content. The precise way in which stress is used in this way depends on the language.
+
+The `em` element isn't a generic "italics" element. Sometimes, text is intended to stand out from the rest of the paragraph, as if it was in a different mood or voice. For this, the i element is more appropriate.
+
+The em element also isn't intended to convey importance; for that purpose, the strong element is more appropriate.
+
+The content inside is typically displayed in italic.
+
+It should not be used to apply italic styling; use the CSS font-style property for that purpose.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+# Accessibility
+
+A screen reader will pronounce the words in `em` with an emphasis, using verbal stress.
+
+### Examples
+
+```html
+I learnt it all <em>by myself</em>!
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/em/em.html)
+
+### Related elements
+
+* Use the [**`cite`**] element to mark the title of a work (book, play, song, etc.).
+* Use the [**`i`**] element to mark text that is in an alternate tone or mood, which covers many common situations for italics such as scientific names or words in other languages.
+* Use the [**`strong`**] element to mark text that has greater importance than surrounding text.
+
+**`i` vs. `em`**
+
+Some developers may be confused by how multiple elements seemingly produce similar visual results. `em` and `i` are a common example, since they both italicize text.
+
+By default, the visual result is the same. However, the semantic meaning is different. The `em` element represents *stress emphasis of its contents*, while the `i` element represents *text that is set off from the normal prose*, such as a foreign word, fictional character thoughts, or when the text refers to the definition of a word instead of representing its semantic meaning.
