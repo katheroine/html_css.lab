@@ -456,3 +456,64 @@ It may help to realize that both are valid and semantic elements in HTML and tha
 Adding to the confusion is the fact that while HTML 4 defined `strong` as indicating a stronger emphasis, HTML 5 defines `strong` as representing "strong importance for its contents." This is an important distinction to make.
 
 While `em` is used to change the meaning of a sentence as spoken emphasis does ("I love carrots" vs. "*I love carrots*"), `strong` is used to give portions of a sentence added importance (e.g., "**Warning! This is very dangerous.**") Both `strong` and `em` can be nested to increase the relative degree of importance or stress emphasis, respectively.
+
+## Small
+
+### Documentation
+
+|Website  |URL                                                                               |
+|---------|----------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_small.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/small        |
+
+### Tag
+
+```html
+<small></small>
+```
+
+### Description
+
+Side comments.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `small` element represents side comments such as small print.
+
+Small print typically features *disclaimers*, *caveats*, *legal restrictions*, or *copyrights*. Small print is also sometimes used for *attribution*, or for *satisfying licensing requirements*, independent of its styled presentation.
+
+The `small` element should not be used for extended spans of text, such as multiple paragraphs, lists, or sections of text. It is only intended for short runs of text.
+
+By default, it renders text within it one font-size smaller, such as from small to x-small.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+GitHub is committed to shaping policies that promote programmers' interests and the future of software. <small>(According to github.com)</small>
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/small/small.html)
+
+### Related elements
+
+* The `small` element does not "de-emphasize" or lower the importance of text emphasized by the [**`em`**](#emphasis) element or marked as important with the [**`strong`**](#strong) element. To mark text as not emphasized or important, simply do not mark it up with the [**`em`**](#emphasis) or [**`strong`**](#strong) elements respectively.
+* The small element must not be used for subheadings; for that purpose, use the [**`hgroup`**](#hgroup) element.
