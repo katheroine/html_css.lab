@@ -221,13 +221,13 @@ Watch out to not write it <u>envinorment</u>.
 
 ### Related elements
 
-* Use [**`em`**](#emphasis) to denote stress emphasis.
-* Use [**`b`**](#bold) to draw attention to text.
-* Use [**`mark`**](#mark) to mark key words or phrases.
-* Use [**`strong`**](#strong) to indicate that text has strong importance.
-* Use [**`cite`**](#citation) to mark the titles of books or other publications.
-* Use [**`i`**](#italic) to denote technical terms, transliterations, thoughts, or names of vessels in Western texts.
-* Use [**`ruby`**](#ruby) to provide textual annotations (as opposed to the non-textual annotations created with `u`).
+* Use the [**`em`**](#emphasis) element to denote stress emphasis.
+* Use the [**`b`**](#bold) element to draw attention to text.
+* Use the [**`mark`**](#mark) element to mark key words or phrases.
+* Use the [**`strong`**](#strong) element to indicate that text has strong importance.
+* Use the [**`cite`**](#citation) element to mark the titles of books or other publications.
+* Use the [**`i`**](#italic) element to denote technical terms, transliterations, thoughts, or names of vessels in Western texts.
+* Use the [**`ruby`**](#ruby) element to provide textual annotations (as opposed to the non-textual annotations created with `u`).
 
 ## Strikethrough
 
@@ -331,8 +331,6 @@ The placement of stress emphasis changes the meaning of the sentence. The elemen
 
 The `em` element isn't a generic "italics" element. Sometimes, text is intended to stand out from the rest of the paragraph, as if it was in a different mood or voice. For this, the i element is more appropriate.
 
-The em element also isn't intended to convey importance; for that purpose, the strong element is more appropriate.
-
 The content inside is typically displayed in italic.
 
 It should not be used to apply italic styling; use the CSS font-style property for that purpose.
@@ -368,3 +366,93 @@ I learnt it all <em>by myself</em>!
 Some developers may be confused by how multiple elements seemingly produce similar visual results. `em` and `i` are a common example, since they both italicize text.
 
 By default, the visual result is the same. However, the semantic meaning is different. The `em` element represents *stress emphasis of its contents*, while the `i` element represents *text that is set off from the normal prose*, such as a foreign word, fictional character thoughts, or when the text refers to the definition of a word instead of representing its semantic meaning.
+
+**`em` vs. `strong`**
+
+Adding to the confusion is the fact that while HTML 4 defined `strong` as indicating a stronger emphasis, HTML 5 defines `strong` as representing "strong importance for its contents." This is an important distinction to make.
+
+While `em` is used to change the meaning of a sentence as spoken emphasis does ("I love carrots" vs. "*I love carrots*"), `strong` is used to give portions of a sentence added importance (e.g., "**Warning! This is very dangerous.**") Both `strong` and `em` can be nested to increase the relative degree of importance or stress emphasis, respectively.
+
+## Strong
+
+### Documentation
+
+|Website  |URL                                                                                |
+|---------|-----------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_strong.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/strong        |
+
+### Tag
+
+```html
+<strong></strong>
+```
+
+### Description
+
+Strong importance, seriousness, or urgency.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `strong` element represents strong importance, seriousness, or urgency for its contents (such as warnings).
+
+The `strong` element can be nested, with each level of nesting indicating a greater degree of importance.
+
+Changing the importance of a piece of text with the strong element does not change the meaning of the sentence.
+
+The content inside is typically displayed in bold.
+
+### Use cases
+
+* *Importance*: the `strong` element can be used in a heading, caption, or paragraph to distinguish the part that really matters from other parts that might be more detailed, more jovial, or merely boilerplate. (This is distinct from marking up subheadings, for which the `hgroup` element is appropriate.)
+* *Seriousness*: the `strong` element can be used to mark up a warning or caution notice. Accepted use for `strong` is to denote the labels of paragraphs which represent notes or warnings within the text of a page.
+* *Urgency*: the `strong` element can be used to denote contents that the user needs to see sooner than other parts of the document.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+<strong>Caution! Hot contents.</strong> Use the holder.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/strong/strong.html)
+
+
+### Related elements
+
+* Use the [**`b`**](#bold) element to specify bold text without any extra importance.
+* Use the [**`b`**](#bold) element to draw attention to certain text without indicating a higher level of importance.
+* Use the [**`em`**](#emphasis) element to mark text that has stress emphasis.
+* Use the [**`hgroup`**](#hgroup) element for marking up subheadings.
+
+**`b` vs. `strong`**
+
+It is often confusing to new developers why there are so many ways to express the same thing on a rendered website. `b` and `strong` are perhaps one of the most common sources of confusion.
+
+The `strong` element is for *content that is of greater importance*, while the `b` element is used to *draw attention to text without indicating that it's more important*.
+
+It may help to realize that both are valid and semantic elements in HTML and that it's a coincidence that they both have the same default styling (boldface) in most browsers (although some older browsers actually underline `strong`).
+
+**`em` vs. `strong`**
+
+Adding to the confusion is the fact that while HTML 4 defined `strong` as indicating a stronger emphasis, HTML 5 defines `strong` as representing "strong importance for its contents." This is an important distinction to make.
+
+While `em` is used to change the meaning of a sentence as spoken emphasis does ("I love carrots" vs. "*I love carrots*"), `strong` is used to give portions of a sentence added importance (e.g., "**Warning! This is very dangerous.**") Both `strong` and `em` can be nested to increase the relative degree of importance or stress emphasis, respectively.
