@@ -640,6 +640,8 @@ Browsers normally insert quotation marks around the quotation.
 <q cite="URL"></q>
 ```
 
+### Attributes
+
 Content inside a `q` element must be quoted from another source, whose address, if it has one, may be cited in the `cite` attribute. The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote. The source may be fictional, as when quoting characters in a novel or screenplay.
 
 If the `cite` attribute is present, it must be a valid URL potentially surrounded by spaces. To obtain the corresponding citation link, the value of the attribute must be parsed relative to the element's node document. User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side scripts collecting statistics about a site's use of quotations), not for readers.
@@ -662,3 +664,95 @@ He used to say <q>Videmus nunc per speculum et in aenigmate</q>, what was the ci
 ### Related elements
 
 * Use [**`blockquote`**](#blockquote) for long quotations.
+
+## Citation
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_cite.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite        |
+
+### Tag
+
+```html
+<cite></cite>
+```
+
+### Description
+
+Short citation.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `cite` element represents the title of a creative work (e.g. a book, a paper, an essay, a poem, a score, a song, a script, a film, a TV show, a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an exhibition, a legal case report, a computer program, etc.). This can be a work that is being quoted or referenced in detail (i.e., a citation), or it can just be a work that is mentioned in passing.
+
+A person's name is not the title of a work — even if people call that person a piece of work — and the element must therefore not be used to mark up people's names.
+
+A citation is not a quote.
+
+The text in the `cite` element usually renders in italic.
+
+### Use cases
+
+In the context of the `cite` element, a creative work could be, for example, one of the following:
+
+* A book
+* A research paper
+* An essay
+* A poem
+* A musical score
+* A song
+* A play or film script
+* A film
+* A television show
+* A game
+* A sculpture
+* A painting
+* A theatrical production
+* A play
+* An opera
+* A musical
+* An exhibition
+* A legal case report
+* A computer program
+* A website
+* A web page
+* A blog post or comment
+* A forum post or comment
+* A tweet
+* A Facebook post
+* A written or oral statement
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+That was the citation from the <cite>Vulgata</cite>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/cite/cite.html)
+
+### Related elements
+
+* In some cases, the [**`b`**](#bold) element might be appropriate for names; e.g. in a gossip article where the names of famous people are keywords rendered with a different style to draw attention to them. In other cases, if an element is really needed, the span element can be used.)
+* A citation is not a quote, for which the [**`q`**](#quotation) element is appropriate.
