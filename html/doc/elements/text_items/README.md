@@ -581,3 +581,84 @@ We work every working day for al least <mark>eight hours</mark>.
 
 * Don't use `mark` for syntax highlighting purposes; instead, use the [**`span`**](#span) element with appropriate CSS applied to it.
 * Don't confuse `mark` with the [**`strong`**](#strong) element; `mark` is used to denote content which has a degree of relevance, while `strong` indicates spans of text of importance.
+
+## Quotation
+
+### Documentation
+
+|Website  |URL                                                                           |
+|---------|------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_q.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q        |
+
+### Tag
+
+```html
+<q></q>
+```
+
+### Description
+
+Short quotation.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `q` element represents some phrasing content quoted from another source.
+
+Quotation punctuation (such as quotation marks) that is quoting the contents of the element must not appear immediately before, after, or inside `q` elements; they will be inserted into the rendering by the user agent.
+
+The `q` element must not be used in place of quotation marks that do not represent quotes; for example, it is inappropriate to use the `q` element for marking up sarcastic statements.
+
+The use of `q` elements to mark up quotations is entirely optional; using explicit quotation punctuation without `q` elements is just as correct.
+
+The `q` HTML element indicates that the enclosed text is a short inline quotation and  don't require paragraph breaks.
+
+Browsers normally insert quotation marks around the quotation.
+
+### Attributes
+
+#### `cite`
+
+**Value**: URL (relative or absolute)
+
+**Description**: Specifies the source of the quotation
+
+**Example**:
+
+```html
+<q cite="URL"></q>
+```
+
+Content inside a `q` element must be quoted from another source, whose address, if it has one, may be cited in the `cite` attribute. The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote. The source may be fictional, as when quoting characters in a novel or screenplay.
+
+If the `cite` attribute is present, it must be a valid URL potentially surrounded by spaces. To obtain the corresponding citation link, the value of the attribute must be parsed relative to the element's node document. User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side scripts collecting statistics about a site's use of quotations), not for readers.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+He used to say <q>Videmus nunc per speculum et in aenigmate</q>, what was the citation from the Vulgata.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/q/q.html)
+* [With `cite` attribute](../../../samples/elements/q/q.attribute_cite.html)
+
+### Related elements
+
+* Use [**`blockquote`**](#blockquote) for long quotations.
