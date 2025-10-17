@@ -36,6 +36,17 @@ The `i` element represents a span of text in an *alternate voice or mood*, or ot
 
 The content inside is typically displayed in italic.
 
+### Attributes
+
+Authors can use the `class` attribute on the `i` element to identify *why* the element is being used, so that if the style of a particular use (e.g. dream sequences as opposed to taxonomic terms) is to be changed at a later date, the author doesn't have to go through the entire document (or series of related documents) annotating each use.
+
+Terms in languages different from the main text should be annotated with `lang` attributes (or, in XML, `lang` attributes in the XML namespace).
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
 #### Use cases
 
 * *Alternative voice or mood*
@@ -49,17 +60,6 @@ The content inside is typically displayed in italic.
 #### History
 
 In earlier versions of the HTML specification, the `i` element was merely a presentational element used to display text in italics, much like the `b` element was used to display text in bold letters. This is no longer true, as these tags now define semantics rather than typographic appearance. A browser will typically still display the contents of the `i` element in italic type, but is, by definition, no longer required to do so.
-
-### Attributes
-
-Authors can use the `class` attribute on the `i` element to identify *why* the element is being used, so that if the style of a particular use (e.g. dream sequences as opposed to taxonomic terms) is to be changed at a later date, the author doesn't have to go through the entire document (or series of related documents) annotating each use.
-
-Terms in languages different from the main text should be annotated with `lang` attributes (or, in XML, `lang` attributes in the XML namespace).
-
-|Attributes support|   |
-|------------------|---|
-|Global attributes |YES|
-|Event attributes  |YES|
 
 ### Examples
 
@@ -116,6 +116,15 @@ The `b` element should be used as a last resort when no other element is more ap
 
 You should not use `b` for styling text or granting importance. If you wish to create boldface text, you should use the CSS `font-weight` property.
 
+### Attributes
+
+Authors can use the `class` attribute on the `b` element to identify why the element is being used, so that if the style of a particular use is to be changed at a later date, the author doesn't have to go through annotating each use.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
 #### Use cases
 
 * *Keywords* in a summary
@@ -125,15 +134,6 @@ You should not use `b` for styling text or granting importance. If you wish to c
 #### History
 
 Historically, the `b` element was meant to make text boldface. Styling information has been deprecated since HTML4, so the meaning of the `b` element has been changed.
-
-### Attributes
-
-Authors can use the `class` attribute on the `b` element to identify why the element is being used, so that if the style of a particular use is to be changed at a later date, the author doesn't have to go through annotating each use.
-
-|Attributes support|   |
-|------------------|---|
-|Global attributes |YES|
-|Event attributes  |YES|
 
 ### Examples
 
@@ -193,6 +193,13 @@ Avoid using the `u` element where it could be confused for a hyperlink!
 
 To apply an underlined appearance without any semantic meaning, use the text-decoration property's value underline.
 
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
 #### Use cases
 
 * Annotating spelling errors
@@ -202,13 +209,6 @@ To apply an underlined appearance without any semantic meaning, use the text-dec
 #### History
 
 Along with other pure styling elements, the original HTML Underline `u` element was deprecated in HTML 4. However, `u` was restored in HTML 5 with a new, semantic, meaning: to mark text as having some form of non-textual annotation applied.
-
-### Attributes
-
-|Attributes support|   |
-|------------------|---|
-|Global attributes |YES|
-|Event attributes  |YES|
 
 ### Examples
 
@@ -413,18 +413,18 @@ Changing the importance of a piece of text with the strong element does not chan
 
 The content inside is typically displayed in bold.
 
-### Use cases
-
-* *Importance*: the `strong` element can be used in a heading, caption, or paragraph to distinguish the part that really matters from other parts that might be more detailed, more jovial, or merely boilerplate. (This is distinct from marking up subheadings, for which the `hgroup` element is appropriate.)
-* *Seriousness*: the `strong` element can be used to mark up a warning or caution notice. Accepted use for `strong` is to denote the labels of paragraphs which represent notes or warnings within the text of a page.
-* *Urgency*: the `strong` element can be used to denote contents that the user needs to see sooner than other parts of the document.
-
 ### Attributes
 
 |Attributes support|   |
 |------------------|---|
 |Global attributes |YES|
 |Event attributes  |YES|
+
+### Use cases
+
+* *Importance*: the `strong` element can be used in a heading, caption, or paragraph to distinguish the part that really matters from other parts that might be more detailed, more jovial, or merely boilerplate. (This is distinct from marking up subheadings, for which the `hgroup` element is appropriate.)
+* *Seriousness*: the `strong` element can be used to mark up a warning or caution notice. Accepted use for `strong` is to denote the labels of paragraphs which represent notes or warnings within the text of a page.
+* *Urgency*: the `strong` element can be used to denote contents that the user needs to see sooner than other parts of the document.
 
 ### Examples
 
@@ -552,17 +552,17 @@ Text marked for reference purposes.
 
 The `mark` element represents a run of text in one document marked or highlighted for reference purposes, due to its relevance in another context. When used in a quotation or other block of text referred to from the prose, it indicates a highlight that was not originally present but which has been added to bring the reader's attention to a part of the text that might not have been considered important by the original author when the block was originally written, but which is now under previously unexpected scrutiny. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its likely relevance to the user's current activity.
 
-### Use cases
-
-* When used in a quotation (`q`) or block quote (`blockquote`), it generally indicates text which is of special interest but is not marked in the original source material, or material which needs special scrutiny even though the original author didn't think it was of particular importance. Think of this like using a highlighter pen in a book to mark passages that you find of interest.
-* Otherwise, `mark` indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
-
 ### Attributes
 
 |Attributes support|   |
 |------------------|---|
 |Global attributes |YES|
 |Event attributes  |YES|
+
+### Use cases
+
+* When used in a quotation (`q`) or block quote (`blockquote`), it generally indicates text which is of special interest but is not marked in the original source material, or material which needs special scrutiny even though the original author didn't think it was of particular importance. Think of this like using a highlighter pen in a book to mark passages that you find of interest.
+* Otherwise, `mark` indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
 
 ### Accessibility
 
@@ -640,8 +640,6 @@ Browsers normally insert quotation marks around the quotation.
 <q cite="URL"></q>
 ```
 
-### Attributes
-
 Content inside a `q` element must be quoted from another source, whose address, if it has one, may be cited in the `cite` attribute. The value of this attribute is a URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote. The source may be fictional, as when quoting characters in a novel or screenplay.
 
 If the `cite` attribute is present, it must be a valid URL potentially surrounded by spaces. To obtain the corresponding citation link, the value of the attribute must be parsed relative to the element's node document. User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side scripts collecting statistics about a site's use of quotations), not for readers.
@@ -705,6 +703,13 @@ A citation is not a quote.
 
 The text in the `cite` element usually renders in italic.
 
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
 ### Use cases
 
 In the context of the `cite` element, a creative work could be, for example, one of the following:
@@ -736,13 +741,6 @@ In the context of the `cite` element, a creative work could be, for example, one
 * A Facebook post
 * A written or oral statement
 
-### Attributes
-
-|Attributes support|   |
-|------------------|---|
-|Global attributes |YES|
-|Event attributes  |YES|
-
 ### Examples
 
 ```html
@@ -756,3 +754,175 @@ That was the citation from the <cite>Vulgata</cite>.
 
 * In some cases, the [**`b`**](#bold) element might be appropriate for names; e.g. in a gossip article where the names of famous people are keywords rendered with a different style to draw attention to them. In other cases, if an element is really needed, the span element can be used.)
 * A citation is not a quote, for which the [**`q`**](#quotation) element is appropriate.
+
+## Definition
+
+### Documentation
+
+|Website  |URL                                                                             |
+|---------|--------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_dfn.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dfn        |
+
+### Tag
+
+```html
+<dfn></dfn>
+```
+
+### Description
+
+The defining instance of a term
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `dfn` element represents the defining instance of a term, and it specifies a term that is going to be defined within the content.
+
+The `dfn` element should be used in a complete definition statement, where the full definition of the term can be one of the following:
+
+* The ancestor ***paragraph*** (a block of text, sometimes marked by a `p` element)
+* The ***description list group*** (a `dt`/`dd` pairing),
+* The nearest ***section*** ancestor of the `dfn` element,
+
+So, the nearest ancestor of the `dfn` element must also contain the definition(s) for the term given by the `dfn` element.
+
+### Attributes
+
+#### `title`
+
+**Value**: Text
+
+**Description**: Specifies the term being defined
+
+**Example**:
+
+```html
+<dfn title="Some Term"></dfn>
+```
+
+If the `title` attribute of the dfn element is present, then it must contain only the term being defined.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Use cases
+
+The term inside the `dfn` tag can be any of the following:
+
+* Just as the content of the `dfn` element:
+
+```html
+<p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+```
+
+* Or, with the title attribute added:
+
+```html
+<p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+```
+
+* Or, with an `abbr` tag inside the `dfn` element:
+
+```html
+<p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p>
+```
+
+* Or, with the id attribute added. Then, whenever a term is used, it can refer back to the definition with an <a> tag:
+
+```html
+<p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
+
+<p>This is some text...</p>
+<p>This is some text...</p>
+<p>Learn <a href="#html-def">HTML</a> now.</p>
+```
+
+**Specifying the term being defined**
+
+The term being defined is identified following these rules:
+
+* If the `dfn` element has a `title` attribute, the value of the `title` attribute is considered to be the term being defined. The element must still have text within it, but that text may be an abbreviation (perhaps using `abbr`) or another form of the term.
+* If the `dfn` contains a single child element and does not have any text content of its own, and the child element is an `abbr` element with a `title` attribute itself, then the exact value of the `abbr` element's title is the term being defined.
+* Otherwise, the text content of the `dfn` element is the term being defined.
+* If the `dfn` element has a `title` attribute, it must contain the term being defined and no other text.
+
+**Links to `dfn` elements**
+
+If you include an `id` attribute on the `dfn` element, you can then link to it using `a` elements. Such links should be uses of the term, with the intent being that the reader can quickly navigate to the term's definition if they're not already aware of it, by clicking on the term's link.
+
+### Examples
+
+* Basic identification of a term
+
+This example uses a plain `dfn` element to identify the location of a term within the definition.
+
+```html
+<p>
+  The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is used
+  to indicate the term being defined within the context of a definition phrase
+  or sentence.
+</p>
+```
+
+Since the `dfn` element has no `title`, the text contents of the `dfn` element itself are used as the term being defined.
+
+* Links to definitions
+
+To add links to the definitions, you create the link the same way you always do, with the `a` element.
+
+```html
+<p>
+  The <strong>HTML Definition element (<dfn id="definition-dfn">&lt;dfn&gt;</dfn>)</strong>
+  is used to indicate the term being defined within the context of a definition
+  phrase or sentence.
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
+  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
+  Scrupulum, inquam, abeunti;
+</p>
+
+<p>
+  Because of all of that, we decided to use the
+  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for this project.
+</p>
+```
+
+Here we see the definition — now with an `id` attribute, "definition-dfn", which can be used as the target of a link. Later on, a link is created using `a` with the `href` attribute set to "#definition-dfn" to set up the link back to the definition.
+
+* Using abbreviations and definitions together
+
+In some cases, you may wish to use an abbreviation for a term when defining it. This can be done by using the `dfn` and `abbr` elements in tandem, like this:
+
+```html
+<p>
+  The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the
+  most productive scientific instruments ever constructed. It has been in orbit
+  for over 20 years, scanning the sky and returning data and photographs of
+  unprecedented quality and detail.
+</p>
+
+<p>
+  Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done
+  more to advance science than any device ever built.
+</p>
+```
+
+Note the `abbr` element nested inside the `dfn`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its title attribute. The latter indicates that the abbreviated term represents a term being defined.
+
+**Samples**:
+* [Basic](../../../samples/elements/abbr/abbr.html)
