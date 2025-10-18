@@ -840,7 +840,7 @@ The term inside the `dfn` tag can be any of the following:
 <p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p>
 ```
 
-* Or, with the id attribute added. Then, whenever a term is used, it can refer back to the definition with an <a> tag:
+* Or, with the id attribute added. Then, whenever a term is used, it can refer back to the definition with an `a` tag:
 
 ```html
 <p><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.</p>
@@ -925,4 +925,17 @@ In some cases, you may wish to use an abbreviation for a term when defining it. 
 Note the `abbr` element nested inside the `dfn`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its title attribute. The latter indicates that the abbreviated term represents a term being defined.
 
 **Samples**:
-* [Basic](../../../samples/elements/abbr/abbr.html)
+* [Basic](../../../samples/elements/dfn/dfn.html)
+* [With `title` attribute](../../../samples/elements/dfn/dfn.attribute_title.html)
+* [With `abbr` element](../../../samples/elements/dfn/dfn.element_abbr.html)
+* [With `id` attribute and `a` element](../../../samples/elements/dfn/dfn.attribute_id_element_a.html)
+* [With `dt` element](../../../samples/elements/dfn/dfn.element_dt.html)
+
+### Relative elements
+
+* The full definition of the term can be in the ancestor [**`p`**](#paragraph) element.
+* The full definition of the term can be in the [**`dd`**](#dd) element.
+* The full definition of the term can be in the narest ancestor [**`section`**](#section) element.
+* The `dfn` element can be nested by the [**`dt`**](#dt) element.
+* The `dfn` element can nest the [**`abbr`**](#abbreviation) element.
+* The [**`a`**](#anchor) element can lead to the `dfn` element.
