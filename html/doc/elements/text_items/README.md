@@ -773,7 +773,7 @@ That was the citation from the <cite>Vulgata</cite>.
 
 ### Description
 
-The defining instance of a term
+The defining instance of a term.
 
 **Type**: Inline
 
@@ -939,3 +939,120 @@ Note the `abbr` element nested inside the `dfn`. The former establishes that the
 * The `dfn` element can be nested by the [**`dt`**](#dt) element.
 * The `dfn` element can nest the [**`abbr`**](#abbreviation) element.
 * The [**`a`**](#anchor) element can lead to the `dfn` element.
+
+## Abbreviation
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_abbr.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/abbr        |
+
+### Tag
+
+```html
+<abbr></abbr>
+```
+
+### Description
+
+An abbreviation or acronym.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `abbr` element represents an abbreviation or acronym, optionally with its expansion. The `abbr` tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+
+### Use cases
+
+Abbreviations do not have to be marked up using this element. It is expected to be useful in the following cases:
+
+* *Abbreviations for which the author wants to give expansions*, where using the `abbr` element with a `title` attribute is an alternative to including the expansion inline (e.g. in parentheses).
+* *Abbreviations that provide an expansion or definition outside the flow of the document's content*, for which `abbr` is used with an appropriate `title` attribute.
+* *Abbreviations that are likely to be unfamiliar to the document's readers*, for which authors are encouraged to either mark up the abbreviation using an `abbr` element with a `title` attribute or include the expansion inline in the text the first time the abbreviation is used.
+* *Abbreviations whose presence needs to be semantically annotated*, e.g. so that they can be identified from a style sheet and given specific styles, for which the `abbr` element can be used without a `title` attribute.
+
+It's certainly not required that all abbreviations be marked up using `abbr`. There are, though, a few cases where it's helpful to do so:
+
+* When an abbreviation's presence in the text needs to be semantically noted, the `abbr` element is useful. This can be used, in turn, for styling or scripting purposes.
+* You can use `abbr` in concert with `dfn` to establish definitions for terms which are abbreviations or acronyms.
+* When including an abbreviation or acronym, provide a full expansion of the term in plain text on *first use*, along with the `abbr` to mark up the abbreviation.
+
+**Grammar considerations**
+
+In languages with grammatical number (that is, languages where the number of items affects the grammar of a sentence), use the same grammatical number in your title attribute as inside your `abbr` element. This is especially important in languages with more than two numbers, such as Arabic, but is also relevant in English.
+
+### Default styling
+
+The purpose of this element is purely for the convenience of the author and all browsers display it inline (display: inline) by default, though its default styling varies from one browser to another.
+
+Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a `span` element. To control this styling, use text-decoration and font-variant.
+
+### Accessibility
+
+Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
+
+Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
+
+```html
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight data-interchange format.
+</p>
+```
+
+This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
+
+### Attributes
+
+#### `title`
+
+**Value**: Text
+
+**Description**: Specifies the term being defined
+
+**Example**:
+
+```html
+<Abbr title="Some Term"></abbr>
+```
+
+The `title` attribute may be used to provide an expansion of the abbreviation. The attribute, if specified, must contain an expansion of the abbreviation, and nothing else. Use the global `title` attribute to show the description for the abbreviation/acronym when you mouse over the element. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
+
+The `title` attribute has a specific semantic meaning when used with the `abbr` element. It must contain a full human-readable description or expansion of the abbreviation.
+
+Providing an expansion in a `title` attribute once will not necessarily cause other `abbr` elements in the same document with the same contents but without a `title` attribute to behave as if they had the same expansion. Every `abbr` element is independent.
+
+Include a `title` attribute only when the inline expansion or definition is not available.
+
+Each `abbr` element you use is independent of all others, providing a title for one does not automatically attach the same expansion text to others with the same content text.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+We used to structure the text with the <abbr title="Hypertext Markup Language">HTML</abbr> as a commonly recognized standard.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/abbr/abbr.html)
+* [With `title` attribute](../../../samples/elements/abbr/abbr.attribute_abbr.html)
+* [With **`dfn`** element](../../../samples/elements/abbr/abbr.element_dfn.html)
+
+### Related elements
+
+* Use `abbr` in concert with [**`dfn`**](#definition) to establish definitions for terms which are abbreviations or acronyms
