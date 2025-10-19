@@ -1180,3 +1180,84 @@ The short example of the code could be <code>print("Hello, world!");</code> simp
 ### Related elements
 
 * To represent multiple lines of code, wrap the `code` element within a [**`pre`**](#preformatted) element.
+
+## Keyboard
+
+### Documentation
+
+|Website  |URL                                                                             |
+|---------|--------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_kbd.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd        |
+
+### Tag
+
+```html
+<kbd></kbd>
+```
+
+### Description
+
+A code fragment.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `kbd` element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).
+
+When the `kbd` element is nested inside a `samp` element, it represents the input as it was echoed by the system.
+
+When the `kbd` element contains a `samp` element, it represents input based on system output, for example invoking a menu item.
+
+When the `kbd` element is nested inside another `kbd` element, it represents an actual key or other single unit of input as appropriate for the input mechanism.
+
+The content inside is displayed in the browser's default monospace font.
+
+**Representing keystrokes within an input**
+
+To describe an input comprised of multiple keystrokes, you can nest multiple `kbd` elements, with an outer `kbd` element representing the overall input and each individual keystroke or component of the input enclosed within its own `kbd`.
+
+```html
+<p>
+  You can also create a new document using the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> keyboard shortcut.
+</p>
+```
+
+This wraps the entire key sequence in an outer `kbd` element, then each individual key within its own, in order to denote the components of the sequence.
+
+You don't need to do all this wrapping. You can choose to simplify it by leaving out the external `kbd` element. In other words, simplifying this to just `<kbd>Ctrl</kbd>+<kbd>N</kbd>` would be perfectly valid.
+
+Depending on your style sheet, though, you may find it useful to do this kind of nesting.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+To list all files from the current working directory with some additional information run a command <kbd>ls -l</kbd>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/kbd/kbd.html)
+* [With **`samp`** element](../../../samples/elements/kbd/kbd.element_samp.html)
+
+### Related elements
+
+* Nesting a `kbd` element inside a [**`samp`**](#sample) element represents input that has been echoed back to the user by the system.
+* Nesting a [**`samp`**](#sample) element inside a `kbd` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.
