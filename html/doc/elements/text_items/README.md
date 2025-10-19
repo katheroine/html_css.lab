@@ -1056,3 +1056,61 @@ We used to structure the text with the <abbr title="Hypertext Markup Language">H
 ### Related elements
 
 * Use `abbr` in concert with [**`dfn`**](#definition) to establish definitions for terms which are abbreviations or acronyms
+
+## Variable
+
+### Documentation
+
+|Website  |URL                                                                             |
+|---------|--------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-var-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_var.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/var        |
+
+### Tag
+
+```html
+<var></var>
+```
+
+### Description
+
+A variable.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+The `var` element represents a variable. This could be an actual variable in a mathematical expression or programming context, an identifier representing a constant, a symbol identifying a physical quantity, a function parameter, or just be a term used as a placeholder in prose.
+
+For mathematics, in particular for anything beyond the simplest of expressions, **MathML** is more appropriate. However, the var element can still be used to refer to specific variables that are then mentioned in MathML expressions.
+
+### Default style
+
+It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+In physics, <var>a</var> means the acceleration.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/var/var.html)
+
+### Related elements
+
+* Use the [**`code`**](#code) element for the computer language.
+* Use the [**`kbd`**](#keyboard) element for the he keyboard input.
+* Use the [**`samp`**](#sample) element for the sample output.
+* Use the [**`span`**](#span) element for the styling purposes.
