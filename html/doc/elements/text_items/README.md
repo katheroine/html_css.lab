@@ -1084,6 +1084,11 @@ A variable.
 * Phrasing content
 * Palpable content
 
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
 The `var` element represents a variable. This could be an actual variable in a mathematical expression or programming context, an identifier representing a constant, a symbol identifying a physical quantity, a function parameter, or just be a term used as a placeholder in prose.
 
 For mathematics, in particular for anything beyond the simplest of expressions, **MathML** is more appropriate. However, the var element can still be used to refer to specific variables that are then mentioned in MathML expressions.
@@ -1114,3 +1119,64 @@ In physics, <var>a</var> means the acceleration.
 * Use the [**`kbd`**](#keyboard) element for the he keyboard input.
 * Use the [**`samp`**](#sample) element for the sample output.
 * Use the [**`span`**](#span) element for the styling purposes.
+
+## Code
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_code.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/code        |
+
+### Tag
+
+```html
+<code></code>
+```
+
+### Description
+
+A code fragment.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `code` element represents a fragment of computer code. This could be an XML element name, a filename, a computer program, or any other string that a computer would recognize.
+
+The `code` element by itself only represents a single phrase of code or line of code.
+
+There is no formal way to indicate the language of computer code being marked up. Authors who wish to mark code elements with the language used, e.g. so that syntax highlighting scripts can use the right rules, can use the class attribute, e.g. by adding a class prefixed with "language-" to the element.
+
+The content inside is displayed in the browser's default monospace font.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+The short example of the code could be <code>print("Hello, world!");</code> simply displaying a given text.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/code/code.html)
+* [With **`pre`** element](../../../samples/elements/code/code.element_pre.html)
+
+### Related elements
+
+* To represent multiple lines of code, wrap the `code` element within a [**`pre`**](#preformatted) element.
