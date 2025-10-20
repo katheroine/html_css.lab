@@ -1261,3 +1261,65 @@ To list all files from the current working directory with some additional inform
 
 * Nesting a `kbd` element inside a [**`samp`**](#sample) element represents input that has been echoed back to the user by the system.
 * Nesting a [**`samp`**](#sample) element inside a `kbd` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.
+
+## Sample
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-samp-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_samp.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/samp        |
+
+### Tag
+
+```html
+<samp></samp>
+```
+
+### Description
+
+A sample or quoted output.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `samp` element represents sample or quoted output from another program or computing system.
+
+**Sample output including user input**
+
+You can nest the `kbd` element within a `samp` block to present an example that includes text entered by the user.
+
+The content inside is displayed in the browser's default monospace font.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+If the address is wrong you will see a message like <samp>404 Page not found</samp>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/samp/samp.html)
+* [With **`kbd`** element](../../../samples/elements/samp/samp.element_kbd.html)
+
+### Related elements
+
+* Nesting a `kbd` element inside a [**`samp`**](#sample) element represents input that has been echoed back to the user by the system.
+* Nesting a [**`samp`**](#sample) element inside a `kbd` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.
