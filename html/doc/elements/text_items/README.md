@@ -1342,7 +1342,7 @@ If the address is wrong you will see a message like <samp>404 Page not found</sa
 
 ### Description
 
-A sample or quoted output.
+A machine-readable form of contents.
 
 **Type**: Inline
 
@@ -1392,7 +1392,7 @@ The `value` attribute must be present. Its value must be a representation of the
 ### Examples
 
 ```html
-Mathematics ofter use the <data class="number" value="3.14">&#x3C0;</data>.
+Mathematicans ofter use the <data class="number" value="3.14">&#x3C0;</data>.
 ```
 
 **Samples**:
@@ -1404,3 +1404,83 @@ Mathematics ofter use the <data class="number" value="3.14">&#x3C0;</data>.
 
 * Often used with [**`li`**](#li) element.
 * Often used with [**`td`**](#td) element.
+
+## Time
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_time.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time        |
+
+### Tag
+
+```html
+<time></time>
+```
+
+### Description
+
+A machine-readable form of date and/or time.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `time` element represents its contents, along with a machine-readable form of those contents in the datetime attribute. The kind of content is limited to various kinds of dates, times, time-zone offsets, and durations, as described below. For example, this can help a user agent offer to add an event to a user's calendar.
+
+The `datetime` attribute may be present. A time element that does not have a `datetime` content attribute must not have any element descendants.
+
+The datetime value of a time element is the value of the element's datetime content attribute, if it has one, otherwise the child text content of the time element.
+
+The datetime value of a time element must match one of the following syntaxes.
+
+[Full list of the valid datetime formats](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time#valid_datetime_values).
+
+## Attributes
+
+#### `datetime`
+
+**Value**: Date and/or time in the one of the acceptable formats.
+
+**Description**: Represents the date/time in a machine-readable format.
+
+**Example**:
+
+```html
+<data datetime="31.10.2025"></data>
+```
+
+If `datetime` attribute is present, its value must be a representation of the element's contents in a machine-readable format.
+
+The `datetime` attribute of this element is used translate the time into a machine-readable format so that browsers can offer to add date reminders through the user's calendar, and search engines can produce smarter search results.
+
+It may represent one of the following:
+
+* A time on a 24-hour clock.
+* A precise date in the Gregorian calendar (with optional time and timezone information).
+* A valid time duration.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+The conference will be held on <time datetime="10-12-2025">December 10, 2025</time>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/time/time.html)
