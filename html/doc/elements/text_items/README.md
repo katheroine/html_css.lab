@@ -1484,3 +1484,73 @@ The conference will be held on <time datetime="10-12-2025">December 10, 2025</ti
 
 **Samples**:
 * [Basic](../../../samples/elements/time/time.html)
+
+## Superscript
+
+### Documentation
+
+|Website  |URL                                                                                      |
+|---------|-----------------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements|
+|W3CSchool|https://www.w3schools.com/tags/tag_sup.asp                                               |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sup                 |
+
+### Tag
+
+```html
+<sup></sup>
+```
+
+### Description
+
+A superscript text.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `sup` element represents a superscript.
+
+The `sup` element should only be used for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
+
+The `sup` tag defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes.
+
+These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake. For example, it would be inappropriate for the `sup` element to be used in the name of the LaTeX document preparation system. In general, authors should use these elements only if the absence of those elements would change the meaning of the content.
+
+In certain languages, superscripts are part of the typographical conventions for some abbreviations.
+
+Superscripts are usually rendered with a raised baseline using smaller text.
+
+### Use cases
+
+Appropriate use cases for `sup` include (but aren't necessarily limited to):
+
+* *Displaying exponents*, such as "x3". It may be worth considering the use of MathML for these, especially in more complex cases.
+* *Displaying superior lettering*, which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "Mlle"; this is an acceptable use case.
+* Representing ordinal numbers, such as "4th" instead of "fourth."
+
+For example, to style the wordmark of a business or product which uses a raised baseline should be done using CSS (most likely vertical-align) rather than `sup`.
+
+## Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+In mathematics, the exponential function is described by the f(x) = e<sup>x</sup> formula.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/sup/sup.html)
