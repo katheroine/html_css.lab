@@ -1323,3 +1323,84 @@ If the address is wrong you will see a message like <samp>404 Page not found</sa
 
 * Nesting a `kbd` element inside a [**`samp`**](#sample) element represents input that has been echoed back to the user by the system.
 * Nesting a [**`samp`**](#sample) element inside a `kbd` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.
+
+## Data
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_data.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/data        |
+
+### Tag
+
+```html
+<data></data>
+```
+
+### Description
+
+A sample or quoted output.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `data` element represents its contents, along with a machine-readable form of those contents in the `value` attribute. The element is used to add a machine-readable translation of a given content.
+
+The element can be used for several purposes.
+
+When combined with microformats or the microdata attributes, the element serves to provide both a machine-readable value for the purposes of data processors, and a human-readable value for the purposes of rendering in a web browser. In this case, the format to be used in the value attribute is determined by the microformats or microdata vocabulary in use.
+
+The element can also, however, be used in conjunction with scripts in the page, for when a script has a literal value to store alongside a human-readable value. In such cases, the format to be used depends only on the needs of the script. (The data-* attributes can also be useful in such situations.)
+
+Sorting JavaScript library can provide a sorting mechanism on each list item or table row used values of the `value` attribute of the `data` element.
+
+When the `value` is date- or time-related, the more specific `time` element can be used instead.
+
+### Attributes
+
+#### `value`
+
+**Value**: Number
+
+**Description**: Represents the element's contents in a machine-readable format.
+
+**Example**:
+
+```html
+<data value="1234"></data>
+```
+
+The `value` attribute must be present. Its value must be a representation of the element's contents in a machine-readable format.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+Mathematics ofter use the <data class="number" value="3.14">&#x3C0;</data>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/data/data.html)
+* [With **`li`** element](../../../samples/elements/data/data.element_li.html)
+* [With **`td`** element](../../../samples/elements/data/data.element_td.html)
+
+### Related elements
+
+* Often used with [**`li`**](#li) element.
+* Often used with [**`td`**](#td) element.
