@@ -1699,4 +1699,48 @@ The `ruby` and `rt` elements can be used for a variety of kinds of annotations.
 ### Related elements
 
 * Use `ruby` together with [**`rt`**](#rt) element that gives that information;
-* And an optional [**`rp`**](#rp) element that defines what to show for browsers that do not support ruby annotations.
+* And an optional [**`rp`**](#ruby-parenthesis) element that defines what to show for browsers that do not support ruby annotations.
+
+## Ruby parenthesis
+
+### Documentation
+
+|Website  |URL                                                                            |
+|---------|-------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_rp.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/rp        |
+
+### Tag
+
+```html
+<rp></rp>
+```
+
+### Description
+
+Provides parentheses or other content around a ruby text component of a ruby annotation in fallback mode.
+
+**Type**: Inline
+
+**Content model**: Text
+
+The `rp` element can be used to provide parentheses or other content around a ruby text component of a ruby annotation, to be shown by user agents that don't support ruby annotations.
+
+An `rp` element that is a child of a `ruby` element represents nothing. An `rp` element whose parent element is not a `ruby` element represents its children. One `rp` element should enclose each of the opening and closing parentheses that wrap the `rt` element that contains the annotation's text.
+
+### Related elements
+
+* Use `rp` together with [**`ruby`**](#ruby) element that consists of one or more characters that needs an explanation/pronunciation;
+* And an [**`rt`**](#rt) element that gives that information.
+
+### Examples
+
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/rp/rp.html)
