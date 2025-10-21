@@ -1622,3 +1622,81 @@ Developer's best friend, C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, 
 
 **Samples**:
 * [Basic](../../../samples/elements/sub/sub.html)
+
+## Ruby
+
+### Documentation
+
+|Website  |URL                                                                              |
+|---------|---------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_ruby.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ruby        |
+
+### Tag
+
+```html
+<ruby></ruby>
+```
+
+### Description
+
+A ruby annotation.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: See prose
+
+The `ruby` element allows one or more spans of phrasing content to be marked with ruby annotations.
+
+**Ruby annotations** are short runs of text presented alongside base text - rendered above, below, or next to base text, primarily used in East Asian typography as a guide for pronunciation or meaning of the corresponding characters or to include other annotations. In Japanese, this form of typography is also known as furigana and is often used in Japanese publications.
+
+It can also be used for annotating other kinds of text, but this usage is less common.
+
+The term ***ruby*** originated as a unit of measurement used by typesetters, representing the smallest size that text can be printed on newsprint while remaining legible.
+
+The content model of ruby elements consists of one or more of the following sequences:
+
+* One or the other of the following:
+
+    * Phrasing content, but with no `ruby` elements and with no `ruby` element descendants
+    * A single `ruby` element that itself has no `ruby` element descendants
+
+* One or the other of the following:
+
+    * One or more `rt` elements
+    * An `rp` element followed by one or more `rt` elements, each of which is itself followed by an `rp` element
+
+
+The `ruby` and `rt` elements can be used for a variety of kinds of annotations.
+
+## Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/ruby/ruby.html)
+
+### Related elements
+
+* Use `ruby` together with [**`rt`**](#rt) element that gives that information;
+* And an optional [**`rp`**](#rp) element that defines what to show for browsers that do not support ruby annotations.
