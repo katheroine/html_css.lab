@@ -1678,7 +1678,7 @@ The content model of ruby elements consists of one or more of the following sequ
 
 The `ruby` and `rt` elements can be used for a variety of kinds of annotations.
 
-## Attributes
+### Attributes
 
 |Attributes support|   |
 |------------------|---|
@@ -1794,3 +1794,105 @@ An `rt` element that is not a child of a `ruby` element represents the same thin
 
 * Use `rt` together with `ruby` element that consists of one or more characters that needs an explanation/pronunciation;
 * And an optional `rp` element that defines what to show for browsers that not support ruby annotations.
+
+## Bidirectional
+
+### Documentation
+
+|Website  |URL                                                                                      |
+|---------|-----------------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_bdi.asp                                               |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdi                 |
+
+### Tag
+
+```html
+<bdi></bdi>
+```
+
+### Description
+
+A bidirectional text.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `bdi` element represents a span of text that is to be isolated from its surroundings for the purposes of bidirectional text formatting.
+
+***BDI*** stands for Bi-Directional Isolation.
+
+The `bdi` tag isolates a part of text that might be formatted in a different direction from other text outside it.
+
+This element is useful when embedding user-generated content with an unknown text direction.
+
+The `bdi` HTML element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text. It's particularly useful when a website dynamically inserts some text and doesn't know the directionality of the text being inserted.
+
+Bidirectional text is text that may contain both sequences of characters that are arranged left-to-right (LTR) and sequences of characters that are arranged right-to-left (RTL), such as an Arabic quotation embedded in an English string. Browsers implement the Unicode Bidirectional Algorithm to handle this. In this algorithm, characters are given an implicit directionality: for example, Latin characters are treated as LTR while Arabic characters are treated as RTL. Some other characters (such as spaces and some punctuation) are treated as neutral and are assigned directionality based on that of their surrounding characters.
+
+Usually, the bidirectional algorithm will do the right thing without the author having to provide any special markup but, occasionally, the algorithm needs help. That's where `bdi` comes in.
+
+The `bdi` element is used to wrap a span of text and instructs the bidirectional algorithm to treat this text in isolation from its surroundings. This works in two ways:
+* The directionality of text embedded in `bdi` does not influence the directionality of the surrounding text.
+* The directionality of text embedded in `bdi` is not influenced by the directionality of the surrounding text.
+
+For example, consider some text like:
+
+```
+EMBEDDED-TEXT - 1st place
+```
+
+If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then - `1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
+
+```
+1 - EMBEDDED-TEXTst place
+```
+
+If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this problem by wrapping `EMBEDDED-TEXT` in a `span` with the dir attribute set to the known directionality. But if you don't know the directionality - for example, because `EMBEDDED-TEXT` is being read from a database or entered by the user - you should use `bdi` to prevent the directionality of `EMBEDDED-TEXT` from affecting its surroundings.
+
+Though the same visual effect can be achieved using the CSS rule unicode-bidi: isolate on a `span` or another text-formatting element, HTML authors should not use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
+
+Embedding the characters in `<span dir="auto"></span>` has the same effect as using `bdi`, but its semantics are less clear.
+
+### Attributes
+
+#### `dir`
+
+**Value**: `auto` | `rtl` | `ltr`
+
+**Description**: Text direction.
+
+**Example**:
+
+```html
+<bdi dir="auto"></bdi>
+```
+
+The `dir` attribute behaves differently than normal: it defaults to `auto`, meaning its value is never inherited from the parent element. This means that unless you specify a value of either `rtl` or `ltr` for `dir`, the user agent will determine the correct directionality to use based on the contents of the `bdi`.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+<bdi>اَلأَعْشَى</bdi> - team leader
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/bdi/bdi.html)
+
+### Related elements
+
+* The element [**`span`**](#span) with the attribute `dir` and value `auto` has the same effect.

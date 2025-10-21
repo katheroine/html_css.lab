@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="english">
+    <title>Sample of bidirectional element</title>
+</head>
+
+<body>
+    <p>
+        When displaying user-generated content from different languages, it's important to handle text direction correctly. For example, the username <bdi>علي</bdi> (Arabic) may appear alongside English text without breaking the layout.
+    </p>
+    <p>
+        In a multilingual chat, if a user sends a message like <bdi>مرحبا﻿￼</bdi> ("Hello"), the bdi element ensures that the text direction does not disrupt the interface.
+    </p>
+    <p>
+        Similarly, when embedding dynamic data such as email addresses or usernames with mixed scripts, using bdi isolates the bidirectional text to prevent display issues.
+    </p>
+</body>
+
+</html>
