@@ -1519,11 +1519,11 @@ A superscript text.
 
 The `sup` element represents a superscript.
 
-The `sup` element should only be used for typographical reasons—that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
+The `sup` element should only be used for typographical reasons - that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
 
 The `sup` tag defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes.
 
-These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake. For example, it would be inappropriate for the `sup` element to be used in the name of the LaTeX document preparation system. In general, authors should use these elements only if the absence of those elements would change the meaning of the content.
+This element must be used only to mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake. For example, it would be inappropriate for the `sup` element to be used in the name of the LaTeX document preparation system. In general, authors should use this element only if the absence of this element would change the meaning of the content.
 
 In certain languages, superscripts are part of the typographical conventions for some abbreviations.
 
@@ -1554,3 +1554,71 @@ In mathematics, the exponential function is described by the f(x) = e<sup>x</sup
 
 **Samples**:
 * [Basic](../../../samples/elements/sup/sup.html)
+
+## Subscript
+
+### Documentation
+
+|Website  |URL                                                                                      |
+|---------|-----------------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements|
+|W3CSchool|https://www.w3schools.com/tags/tag_sub.asp                                               |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sub                 |
+
+### Tag
+
+```html
+<sub></sub>
+```
+
+### Description
+
+A subscript text.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `sub` element represents a subscript.
+
+The `sub` element should be used only for typographical reasons - that is, to change the position of the text to comply with typographical conventions or standards, rather than solely for presentation or appearance purposes.
+
+The `sub` tag defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas.
+
+This element must be used only to mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake. For example, it would be inappropriate for the `sub` element to be used in the name of the LaTeX document preparation system. In general, authors should use this element only if the absence of this element would change the meaning of the content. Using `sub` to style the name of a company which uses altered baselines in their wordmark would not be appropriate; instead, CSS should be used.
+
+The `sub` element can be used inside a `var` element, for variables that have subscripts.
+
+Subscripts are typically rendered with a lowered baseline using smaller text.
+
+### Use cases
+
+Appropriate use cases for `sub` include (but aren't necessarily limited to):
+
+* *Marking up footnote numbers*.
+* *Marking up the subscript in mathematical variable numbers* (although you may also consider using a MathML formula for this).
+* *Denoting the number of atoms of a given element within a chemical formula*.
+
+## Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+Developer's best friend, C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, otherwise known as "caffeine".
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/sub/sub.html)
