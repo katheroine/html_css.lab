@@ -1723,16 +1723,14 @@ Provides parentheses or other content around a ruby text component of a ruby ann
 
 **Type**: Inline
 
+**Contexts in which this element can be used**:
+* As a child of a `ruby` element, either immediately before or immediately after an `rt` element
+
 **Content model**: Text
 
 The `rp` element can be used to provide parentheses or other content around a ruby text component of a ruby annotation, to be shown by user agents that don't support ruby annotations.
 
 An `rp` element that is a child of a `ruby` element represents nothing. An `rp` element whose parent element is not a `ruby` element represents its children. One `rp` element should enclose each of the opening and closing parentheses that wrap the `rt` element that contains the annotation's text.
-
-### Related elements
-
-* Use `rp` together with [**`ruby`**](#ruby) element that consists of one or more characters that needs an explanation/pronunciation;
-* And an [**`rt`**](#rt) element that gives that information.
 
 ### Examples
 
@@ -1744,3 +1742,55 @@ An `rp` element that is a child of a `ruby` element represents nothing. An `rp` 
 
 **Samples**:
 * [Basic](../../../samples/elements/rp/rp.html)
+
+### Related elements
+
+* Use `rp` together with [**`ruby`**](#ruby) element that consists of one or more characters that needs an explanation/pronunciation;
+* And an [**`rt`**](#rt) element that gives that information.
+
+## Ruby text
+
+### Documentation
+
+|Website  |URL                                                                            |
+|---------|-------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rt-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_rt.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/rt        |
+
+### Tag
+
+```html
+<rt></rt>
+```
+
+### Description
+
+The ruby text component of a ruby annotation.
+
+**Type**: Inline
+
+**Contexts in which this element can be used**:
+* As a child of a `ruby` element
+
+**Content model**: Phrasing content
+
+The `rt` element marks the ruby text component of a ruby annotation. When it is the child of a `ruby` element, it doesn't represent anything itself, but the `ruby` element uses it as part of determining what it represents.
+
+An `rt` element that is not a child of a `ruby` element represents the same thing as its children. The `rt` element must always be contained within a <ruby> element.
+
+### Examples
+
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/rt/rt.html)
+
+### Related elements
+
+* Use `rt` together with `ruby` element that consists of one or more characters that needs an explanation/pronunciation;
+* And an optional `rp` element that defines what to show for browsers that not support ruby annotations.
