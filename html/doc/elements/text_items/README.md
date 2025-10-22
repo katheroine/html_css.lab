@@ -1957,7 +1957,58 @@ The `dir` attribute is required, with the value `ltr` to specify a left-to-right
 ### Examples
 
 ```html
+The English song "Oh I do like to be beside the seaside" in Hebrew: <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
 ```
 
 **Samples**:
 * [Basic](../../../samples/elements/bdo/bdo.html)
+
+## Break
+
+### Documentation
+
+|Website  |URL                                                                            |
+|---------|-------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_br.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/br        |
+
+### Tag
+
+```html
+<br>
+```
+
+### Description
+
+A text line break.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+The `br` element inserts a single line break (carriage-return). A `br` element is included at each point where we want the text to break. The text after the `br` begins again at the start of the next line of the text block.
+
+The `br` elements must be used only for line breaks that are actually part of the content, as in poems or addresses.
+
+Use the `br` element to enter line breaks, not to add space between paragraphs.
+
+### Accessibility
+
+Creating separate paragraphs of text using `br` element is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `br` elements. This can be a confusing and frustrating experience for the person using the screen reader.
+
+### Examples
+
+```html
+Massachusetts Institute of Technology<br>
+77 Massachusetts Avenue<br>
+Cambridge, MA 02139, USA
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/br/br.html)
