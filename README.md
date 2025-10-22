@@ -73,3 +73,16 @@ HTML & CSS laboratory
     27. [Block quotation `<blockquote></blockquote>`](html/samples/elements/blockquote/)
     28. [Preformatted text `<pre></pre>`](html/samples/elements/pre/)
     29. [Horizontal rule `<hr>`](html/samples/elements/hr/)
+
+### CSS
+
+#### Description
+
+1. Properties
+    1. [Text](css/doc/properties/text/README.md)
+        1. [Color `color`](css/doc/properties/text/README.md#color)
+
+#### Samples
+
+1. Properties
+    1. [Color `color`](css/example/properties/color/)
