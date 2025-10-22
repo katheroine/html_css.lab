@@ -2002,6 +2002,13 @@ Use the `br` element to enter line breaks, not to add space between paragraphs.
 
 Creating separate paragraphs of text using `br` element is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `br` elements. This can be a confusing and frustrating experience for the person using the screen reader.
 
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
 ### Examples
 
 ```html
@@ -2012,3 +2019,54 @@ Cambridge, MA 02139, USA
 
 **Samples**:
 * [Basic](../../../samples/elements/br/br.html)
+
+## Word break
+
+### Documentation
+
+|Website  |URL                                                                             |
+|---------|--------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_wbr.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/wbr        |
+
+### Tag
+
+```html
+<wbr>
+```
+
+### Description
+
+A text line break opportunity.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+The `wbr` element represents a line break opportunity.
+
+It specifies where in a text it would be ok to add a line-break. When a word is too long, the browser might break it at the wrong place. You can use the `wbr` element to add word break opportunities.
+
+### Attributes
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+Massachusetts Institute of Technology<wbr>
+77 Massachusetts Avenue<wbr>
+Cambridge, MA 02139, USA
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/wbr/wbr.html)

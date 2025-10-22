@@ -36,6 +36,7 @@ HTML & CSS laboratory
         24. [Bidirectional `<bdi></bdi>`](html/doc/elements/text_items/README.md#bidirectional)
         25. [Bidirectional override `<bdo></bdo>`](html/doc/elements/text_items/README.md#bidirectional-override)
         26. [Break `<br>`](html/doc/elements/text_items/README.md#break)
+        27. [Word break `<wbr>`](html/doc/elements/text_items/README.md#word-break)
     2. [Text packets](html/doc/elements/text_packets/README.md)
         1. [Paragraph `<p></p>`](html/doc/elements/text_packets/README.md#paragraph)
         2. [Block quotation `<blockquote></blockquote>`](html/doc/elements/text_packets/README.md#block-quotation)
@@ -71,10 +72,11 @@ HTML & CSS laboratory
     24. [Bidirectional `<bdi></bdi>`](html/samples/elements/bdi/)
     25. [Bidirectional override `<bdo></bdo>`](html/samples/elements/bdo/)
     26. [Break `<br>`](html/samples/elements/br/)
-    27. [Paragraph `<p></p>`](html/samples/elements/p/)
-    28. [Block quotation `<blockquote></blockquote>`](html/samples/elements/blockquote/)
-    29. [Preformatted text `<pre></pre>`](html/samples/elements/pre/)
-    30. [Horizontal rule `<hr>`](html/samples/elements/hr/)
+    27. [Word break `<wbr>`](html/samples/elements/wbr/)
+    28. [Paragraph `<p></p>`](html/samples/elements/p/)
+    29. [Block quotation `<blockquote></blockquote>`](html/samples/elements/blockquote/)
+    30. [Preformatted text `<pre></pre>`](html/samples/elements/pre/)
+    31. [Horizontal rule `<hr>`](html/samples/elements/hr/)
 
 ### CSS
 
