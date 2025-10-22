@@ -1799,11 +1799,11 @@ An `rt` element that is not a child of a `ruby` element represents the same thin
 
 ### Documentation
 
-|Website  |URL                                                                                      |
-|---------|-----------------------------------------------------------------------------------------|
+|Website  |URL                                                                             |
+|---------|--------------------------------------------------------------------------------|
 |WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element|
-|W3CSchool|https://www.w3schools.com/tags/tag_bdi.asp                                               |
-|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdi                 |
+|W3CSchool|https://www.w3schools.com/tags/tag_bdi.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdi        |
 
 ### Tag
 
@@ -1896,3 +1896,68 @@ The `dir` attribute behaves differently than normal: it defaults to `auto`, mean
 ### Related elements
 
 * The element [**`span`**](#span) with the attribute `dir` and value `auto` has the same effect.
+
+## Bidirectional override
+
+### Documentation
+
+|Website  |URL                                                                             |
+|---------|--------------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element|
+|W3CSchool|https://www.w3schools.com/tags/tag_bdo.asp                                      |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdo        |
+
+### Tag
+
+```html
+<bdo></bdo>
+```
+
+### Description
+
+A bidirectional text override.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Phrasing content
+
+The `bdo` element represents explicit text directionality formatting control for its children. It allows authors to override the Unicode bidirectional algorithm by explicitly specifying a direction override.
+
+Authors must specify the `dir` attribute on this element.
+
+### Attributes
+
+#### `dir`
+
+**Value**: `rtl` | `ltr`
+
+**Description**: Text direction.
+
+**Example**:
+
+```html
+<bdo dir="ltr"></bdo>
+```
+
+The `dir` attribute is required, with the value `ltr` to specify a left-to-right override and with the value `rtl` to specify a right-to-left override. The `auto` value must not be specified.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Examples
+
+```html
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/bdo/bdo.html)
