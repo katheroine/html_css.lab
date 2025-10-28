@@ -2070,3 +2070,102 @@ Cambridge, MA 02139, USA
 
 **Samples**:
 * [Basic](../../../samples/elements/wbr/wbr.html)
+
+## Deleted
+
+### Documentation
+
+|Website  |URL                                                                     |
+|---------|------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/edits.html#the-del-element       |
+|W3CSchool|https://www.w3schools.com/tags/tag_del.asp                              |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/del|
+
+### Tag
+
+```html
+<del></del>
+```
+
+### Description
+
+Deleted text.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Transparent
+
+The `del` element represents a removal from the document.
+
+The `del` HTML element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example.
+
+`del` elements should not cross implied paragraph boundaries.
+
+### Attributes
+
+#### `cite`
+
+**Value**: URL (relative or absolute)
+
+**Description**: Specifies a resource that explains the change (for example, meeting minutes)
+
+**Example**:
+
+```html
+<del cite="URL"></del>
+```
+
+The `cite` attribute may be used to specify the URL of a document that explains the change. When that document is long, for instance the minutes of a meeting, authors are encouraged to include a fragment pointing to the specific part of that document that discusses the change.
+
+If the `cite` attribute is present, it must be a valid URL potentially surrounded by spaces that explains the change. To obtain the corresponding citation link, the value of the attribute must be parsed relative to the element's node document. User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side scripts collecting statistics about a site's edits), not for readers.
+
+#### `datetime`
+
+**Value**: Date and/or time in the one of the acceptable formats.
+
+**Description**: Represents the time and date of the change.
+
+**Example**:
+
+```html
+<del datetime="31.10.2025"></del>
+```
+
+The `datetime` attribute may be used to specify the time and date of the change.
+
+If present, the `datetime` attribute's value must be a valid date string with optional time.
+
+User agents must parse the `datetime` attribute according to the parse a date or time string algorithm. If that doesn't return a date or a global date and time, then the modification has no associated timestamp (the value is non-conforming; it is not a valid date string with optional time). Otherwise, the modification is marked as having been made at the given date or global date and time. If the given value is a global date and time, then user agents should use the associated time-zone offset information to determine which time zone to present the given datetime in.
+
+This value may be shown to the user, but it is primarily intended for private use.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Accessibility
+
+The presence of the `del` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS content property, along with the `::before` and `::after` pseudo-elements.
+
+Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been deleted would adversely affect understanding.
+
+### Examples
+
+```html
+The daily meeting time: <del>09:00 AM</del> 09:30 AM.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/del/del.html)
+
+### Related elements
+
+* The [**`ins`**](#inserted) element is usually used along with `del`.
