@@ -2108,11 +2108,13 @@ The `del` HTML element represents a range of text that has been deleted from a d
 
 `del` elements should not cross implied paragraph boundaries.
 
+Browsers will usually strike a line through deleted text.
+
 ### Attributes
 
 #### `cite`
 
-**Value**: URL (relative or absolute)
+**Value**: URI (relative or absolute)
 
 **Description**: Specifies a resource that explains the change (for example, meeting minutes)
 
@@ -2160,7 +2162,7 @@ Some people who use screen readers deliberately disable announcing content that 
 ### Examples
 
 ```html
-The daily meeting time: <del>09:00 AM</del> 09:30 AM.
+The daily meeting time: <del>09:00 AM</del> <ins>09:30 AM</ins>.
 ```
 
 **Samples**:
@@ -2169,3 +2171,103 @@ The daily meeting time: <del>09:00 AM</del> 09:30 AM.
 ### Related elements
 
 * The [**`ins`**](#inserted) element is usually used along with `del`.
+
+## Inserted
+
+### Documentation
+
+|Website  |URL                                                                     |
+|---------|------------------------------------------------------------------------|
+|WHATWG   |https://html.spec.whatwg.org/multipage/edits.html#the-ins-element       |
+|W3CSchool|https://www.w3schools.com/tags/tag_ins.asp                              |
+|MDN      |https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ins|
+
+### Tag
+
+```html
+<ins></ins>
+```
+
+### Description
+
+Inserted text.
+
+**Type**: Inline
+
+**Categories**:
+* Flow content
+* Phrasing content
+* Palpable content
+
+**Contexts in which this element can be used**:
+* Where phrasing content is expected
+
+**Content model**: Transparent
+
+The `ins` element represents an addition to the document.
+
+The `ins` HTML element represents a range of text that has been added to a document.
+
+`ins` elements should not cross implied paragraph boundaries.
+
+Browsers will usually underline inserted text.
+
+### Attributes
+
+#### `cite`
+
+**Value**: URI (relative or absolute)
+
+**Description**: Specifies a resource that explains the change (for example, meeting minutes or a ticket in a troubleshooting system)
+
+**Example**:
+
+```html
+<ins cite="URL"></ins>
+```
+
+The `cite` attribute may be used to specify the URL of a document that explains the change. When that document is long, for instance the minutes of a meeting, authors are encouraged to include a fragment pointing to the specific part of that document that discusses the change.
+
+If the `cite` attribute is present, it must be a valid URL potentially surrounded by spaces that explains the change. To obtain the corresponding citation link, the value of the attribute must be parsed relative to the element's node document. User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side scripts collecting statistics about a site's edits), not for readers.
+
+#### `datetime`
+
+**Value**: Date and/or time in the one of the acceptable formats.
+
+**Description**: Represents the time and date of the change.
+
+**Example**:
+
+```html
+<ins datetime="31.10.2025"></ins>
+```
+
+The `datetime` attribute may be used to specify the time and date of the change.
+
+If present, the `datetime` attribute's value must be a valid date string with optional time.
+
+User agents must parse the `datetime` attribute according to the parse a date or time string algorithm. If that doesn't return a date or a global date and time, then the modification has no associated timestamp (the value is non-conforming; it is not a valid date string with optional time). Otherwise, the modification is marked as having been made at the given date or global date and time. If the given value is a global date and time, then user agents should use the associated time-zone offset information to determine which time zone to present the given datetime in.
+
+|Attributes support|   |
+|------------------|---|
+|Global attributes |YES|
+|Event attributes  |YES|
+
+### Accessibility
+
+The presence of the `ins` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS content property, along with the `::before` and `::after` pseudo-elements.
+
+Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been inserted would adversely affect understanding.
+
+### Examples
+
+```html
+The daily meeting time: <del>09:00 AM</del> <ins>09:30 AM</ins>.
+```
+
+**Samples**:
+* [Basic](../../../samples/elements/ins/ins.html)
+
+### Related elements
+
+* The [**`del`**](#deleted) element is usually used along with `ins`.
